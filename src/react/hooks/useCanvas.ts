@@ -1,5 +1,5 @@
-import type { ReactRef } from "@/react/types";
 import { useCallback, useEffect, useRef } from "react";
+import type { ReactRef } from "@/react/types";
 
 export type UseCanvasHookReturnType = {
     ref: ReactRef<HTMLCanvasElement | null>;
