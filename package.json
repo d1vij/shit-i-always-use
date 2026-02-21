@@ -43,7 +43,9 @@
 		"test": "bun test",
 		"test:coverage": "bun test --coverage",
 		"test:watch": "bun test --watch",
-		"type-check": "tsc --noEmit"
+		"type-check": "tsc --noEmit",
+		"publish": "bun run build && npm publish"
+
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.2",
