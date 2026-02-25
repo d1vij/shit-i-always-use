@@ -1,4 +1,9 @@
 /**
+ * Everything a react functional component can return
+ */
+export type JSX = React.JSX.Element | null;
+
+/**
  * Abstract type reprenseting a `setState` function
  * @example
  * const [count, setCount] = useState(0);
@@ -20,7 +25,7 @@ export type StateSetterFunction<T> = React.Dispatch<React.SetStateAction<T>>;
  * // now if component foo wants to accept all valid react children
  * type FooChildrenProps = PropsWithChildren<FooProps>
  */
-export type PropsWithChildren<Props extends object> = {
+export type PropsWithChildren<Props extends object = object> = {
     [K in keyof Props]: Props[K];
 } & {
     children: React.ReactNode;

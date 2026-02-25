@@ -5,8 +5,7 @@ import { useMemo } from "react";
  * @param pattern Single duration to vibrate for or a pattern of durations
  * @returns boolean depending upon whether vibration was done or not
  */
-type Pattern = number | number[];
-type VibrateFn = (pattern: Pattern) => boolean;
+type VibrateFn = (pattern: VibratePattern) => boolean;
 
 /**
  * Returns a function to generate single or pattern of vibrations if device supports.
@@ -20,7 +19,7 @@ type VibrateFn = (pattern: Pattern) => boolean;
 export function useVibrate(): VibrateFn {
     return useMemo(() => {
         if ("vibrate" in navigator && typeof navigator.vibrate === "function") {
-            return (pattern: Pattern) => {
+            return (pattern: VibratePattern) => {
                 return navigator.vibrate(pattern);
             };
         } else {
