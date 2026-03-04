@@ -16,7 +16,7 @@ export type ActivityProps = PropsWithChildren &
               show?: never;
           }
     );
-export default function Activity({ mode, show, children }: ActivityProps): JSX {
+export function Activity({ mode, show, children }: ActivityProps): JSX {
     // either one would be always defined
     const value = show || mode;
     return (
