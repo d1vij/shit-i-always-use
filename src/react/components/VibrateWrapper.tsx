@@ -1,5 +1,5 @@
-import type { JSX, PropsWithChildren } from "@/react/types";
 import { useCallback } from "react";
+import type { JSX, PropsWithChildren } from "@/react/types";
 import { useVibrate } from "../hooks";
 
 export type VibrateOnClickProps = PropsWithChildren & {
@@ -15,7 +15,12 @@ export function VibrateOnClick({
     }, [pattern, vibrator]);
     return (
         // biome-ignore lint/a11y/useSemanticElements: <>
-<div onClick={handleClick} role="button" tabIndex={0} onKeyUp={handleClick}>
+        <div
+            onClick={handleClick}
+            role="button"
+            tabIndex={0}
+            onKeyUp={handleClick}
+        >
             {children}
         </div>
     );
