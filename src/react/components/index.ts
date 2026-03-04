@@ -1,2 +1,2 @@
-export * from "./Activity"
-export * from "./VibrateWrapper"
+export * from "./Activity";
+export * from "./VibrateWrapper";
