@@ -18,7 +18,7 @@ export type ActivityProps = PropsWithChildren &
     );
 export function Activity({ mode, show, children }: ActivityProps): JSX {
     // either one would be always defined
-    const value = show || mode;
+    const value = show ?? mode;
     return (
         <RActivity
             mode={
