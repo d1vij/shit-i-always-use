@@ -6,5 +6,5 @@ import { nanoid } from "nanoid";
  * @returns
  */
 export function getId(length?: number): string {
-  return nanoid(length);
+    return nanoid(length);
 }

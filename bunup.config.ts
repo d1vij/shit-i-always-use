@@ -5,6 +5,7 @@ export default defineConfig({
     format: ["esm"],
     dts: true,
     external: ["react", "react-dom"],
+    // always define this as is
     define: {
         "process.env.NODE_ENV": "production",
     },
