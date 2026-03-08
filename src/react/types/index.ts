@@ -26,9 +26,9 @@ export type StateSetterFunction<T> = React.Dispatch<React.SetStateAction<T>>;
  * type FooChildrenProps = PropsWithChildren<FooProps>
  */
 export type PropsWithChildren<Props extends object = object> = {
-    [K in keyof Props]: Props[K];
+  [K in keyof Props]: Props[K];
 } & {
-    children: React.ReactNode;
+  children: React.ReactNode;
 };
 
 /**

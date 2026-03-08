@@ -17,14 +17,14 @@ type VibrateFn = (pattern: VibratePattern) => boolean;
  * vibrator([100, 50, 100]); // vibrate pattern
  */
 export function useVibrate(): VibrateFn {
-    return useMemo(() => {
-        if ("vibrate" in navigator && typeof navigator.vibrate === "function") {
-            return (pattern: VibratePattern) => {
-                return navigator.vibrate(pattern);
-            };
-        } else {
-            console.log("Your device doesn't support vibrations (╥﹏╥)");
-            return () => false;
-        }
-    }, []);
+  return useMemo(() => {
+    if ("vibrate" in navigator && typeof navigator.vibrate === "function") {
+      return (pattern: VibratePattern) => {
+        return navigator.vibrate(pattern);
+      };
+    } else {
+      console.log("Your device doesn't support vibrations (╥﹏╥)");
+      return () => false;
+    }
+  }, []);
 }
