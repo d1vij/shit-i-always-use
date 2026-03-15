@@ -1,10 +1,5 @@
-//@ts-nocheck
+import {getIntBetween} from "../src"
 
-import type { PropsWithChildren } from "../src/react/types";
-
-type p = {
-  a: number;
-  b: string;
-};
-
-type mutatedP = PropsWithChildren<p>;
+for (const _ of Array(10)) {
+    console.log(getIntBetween(1, 10, true))
+}
