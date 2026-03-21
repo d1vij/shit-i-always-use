@@ -1,4 +1,7 @@
-import { useMemo } from "react";
+import { useCallback } from "react";
+
+const canVibrate =
+    typeof navigator !== "undefined" && typeof navigator.vibrate === "function";
 
 /**
  * Function to generate vibration
@@ -17,14 +20,10 @@ type VibrateFn = (pattern: VibratePattern) => boolean;
  * vibrator([100, 50, 100]); // vibrate pattern
  */
 export function useVibrate(): VibrateFn {
-    return useMemo(() => {
-        if ("vibrate" in navigator && typeof navigator.vibrate === "function") {
-            return (pattern: VibratePattern) => {
-                return navigator.vibrate(pattern);
-            };
-        } else {
-            console.log("Your device doesn't support vibrations (╥﹏╥)");
-            return () => false;
-        }
-    }, []);
+    return useCallback(
+        canVibrate
+            ? (pattern: VibratePattern) => navigator.vibrate(pattern)
+            : () => false,
+        [],
+    );
 }
