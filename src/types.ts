@@ -3,7 +3,6 @@
  */
 export type Expand<T> = T extends infer O ? { [K in keyof O]: O[K] } : never;
 
-
 /**
  * Returns the keys from a Object-like which have the values of provided type
  */
