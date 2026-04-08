@@ -22,16 +22,22 @@
         "dist"
     ],
     "type": "module",
-    "module": "./dist/index.js",
-    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
             "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/index.js"
+                "types": "./dist/vanilla/index.d.ts",
+                "default": "./dist/vanilla/index.js"
             }
         },
-        "./package.json": "./package.json"
+        "./package.json": "./package.json",
+        "./svelte": {
+            "types":"./dist/svelte/index.d.ts",
+            "import":"./dist/svelte/index.js"
+        },
+        "./react": {
+            "types":"./dist/react/index.d.ts",
+            "import":"./dist/react/index.js"
+        }
     },
     "scripts": {
         "build": "bunup",
@@ -58,8 +64,10 @@
         "typescript": "^5.9.3"
     },
     "peerDependencies": {
+        "radashi": "^12.7.2",
         "react": "^18.0.0 || ^19.0.0",
         "react-dom": "^18.0.0 || ^19.0.0",
+        "svelte": "^5.55.2",
         "typescript": ">=4.5.0"
     },
     "peerDependenciesMeta": {
