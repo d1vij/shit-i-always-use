@@ -31,16 +31,16 @@
         },
         "./package.json": "./package.json",
         "./svelte": {
-            "types":"./dist/svelte/index.d.ts",
-            "import":"./dist/svelte/index.js"
+            "types": "./dist/svelte/index.d.ts",
+            "import": "./dist/svelte/index.js"
         },
         "./react": {
-            "types":"./dist/react/index.d.ts",
-            "import":"./dist/react/index.js"
+            "types": "./dist/react/index.d.ts",
+            "import": "./dist/react/index.js"
         }
     },
     "scripts": {
-        "build": "bunup",
+        "build": "bun run build.ts",
         "dev": "bun run --cwd test/ui dev",
         "format": "biome format --write",
         "lint": "biome check --fix",
@@ -79,8 +79,10 @@
         "pre-commit": "bun run lint && bun run type-check"
     },
     "dependencies": {
+        "@sveltejs/package": "^2.5.7",
         "clsx": "^2.1.1",
         "nanoid": "^5.1.6",
+        "svelte-package": "^0.1.0",
         "tailwind-merge": "^3.5.0"
     }
 }
