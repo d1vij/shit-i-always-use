@@ -20,15 +20,15 @@
         "declaration": true,
         "isolatedDeclarations": true,
 
-        "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"],
+            "$lib/*": ["./src/svelte/lib/*"],
         },
 
         "noUnusedLocals": false,
         "noUnusedParameters": false,
         "noPropertyAccessFromIndexSignature": false,
-        "types": ["svelte"]
+        "types": ["svelte"],
     },
 
     "include": ["src/**/*"],
