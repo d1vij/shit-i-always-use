@@ -6,7 +6,7 @@
         "useIgnoreFile": true
     },
     "files": {
-        "includes": ["src/**/*", "!!**/dist", "!!./tests", "bunup.config.ts"]
+        "includes": ["src/**/*", "!!**/dist", "tests/**/*", "bunup.config.ts"]
     },
     "formatter": {
         "enabled": true,

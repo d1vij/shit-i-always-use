@@ -28,9 +28,9 @@
         "noUnusedLocals": false,
         "noUnusedParameters": false,
         "noPropertyAccessFromIndexSignature": false,
-        "types": ["svelte"],
+        "types": ["svelte", "bun"],
     },
 
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "tests/**/*"],
     "exclude": ["node_modules", "dist", "bunup.config.ts"],
 }
