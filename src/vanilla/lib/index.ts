@@ -1,2 +1,1 @@
-export * from "./getId";
-export * from "./getIntBetween";
+export * from "./cn";

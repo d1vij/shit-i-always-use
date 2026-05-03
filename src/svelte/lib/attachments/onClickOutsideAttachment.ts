@@ -1,4 +1,4 @@
-import { onClickOutside, type OnClickOutsideOptions } from "runed";
+import { type OnClickOutsideOptions, onClickOutside } from "runed";
 import type { Attachment } from "svelte/attachments";
 
 export type OnClickOutsideAttachmentOptions = OnClickOutsideOptions & {

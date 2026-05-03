@@ -1,2 +1,2 @@
-export * from "./vibrateOnClick";
 export * from "./onClickOutsideAttachment";
+export * from "./vibrateOnClick";
