@@ -32,7 +32,8 @@
         "./package.json": "./package.json",
         "./svelte": {
             "types": "./dist/svelte/index.d.ts",
-            "import": "./dist/svelte/index.js"
+            "import": "./dist/svelte/index.js",
+            "svelte": "./dist/svelte/index.js"
         },
         "./react": {
             "types": "./dist/react/index.d.ts",
